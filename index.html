@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Sphera 3D — Киностар, Грозный Молл</title>
+  <meta name="description" content="Афиша и 8 залов Киностар в Грозный Молле в 3D: посмотрите на экран с любого кресла, проверьте звук с места, забронируйте и оплатите билеты." />
+  <meta name="theme-color" content="#12152b" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2312152b'/%3E%3Cpath d='M50 18 L82 50 L50 82 L18 50 Z' fill='none' stroke='%23c9a04a' stroke-width='7'/%3E%3Cpath d='M50 36 L64 50 L50 64 L36 50 Z' fill='%239e2236'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="/src/app.css" />
+</head>
+<body>
+  <a class="skip-link" href="#view">К содержимому</a>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Sphera 3D, на главную">
+      <span class="brand-mark"></span>
+      <span class="brand-text"><span class="brand-name">Sphera 3D</span><span class="brand-place">Киностар, Грозный Молл</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Разделы">
+      <a href="/" data-nav="home">Афиша</a>
+      <a href="/halls" data-nav="halls">Залы</a>
+      <a href="/tickets" data-nav="tickets">Мои билеты</a>
+    </nav>
+    <button class="sound-btn" id="soundBtn" aria-pressed="false" title="Музыка сайта и звук залов">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path class="spk" d="M4 9v6h4l5 4V5L8 9H4z"/><path class="w1" d="M16 9a4 4 0 0 1 0 6"/><path class="w2" d="M18.5 6.5a8 8 0 0 1 0 11"/></svg>
+      <span>Включить звук</span>
+    </button>
+  </header>
+  <canvas id="scene" hidden aria-label="3D-модель зала"></canvas>
+  <main id="view" tabindex="-1"></main>
+  <footer class="site-footer">Концепт для хакатона, не официальный сайт Киностар. Залы смоделированы приблизительно, фильмы и цены вымышленные, оплата тестовая.</footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
